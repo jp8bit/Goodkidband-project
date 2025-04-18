@@ -1,0 +1,121 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: arcade;
+  src: url(../fonts/ARCADECLASSIC.TTF);
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body {
+font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  background-image: linear-gradient(to bottom, #ffc2cc, #5e2f66);
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+}
+
+header > div#logo {
+  height: 125px;
+  display: flex;
+  align-items: center;
+}
+
+header > div#logo > a > img {
+  height: 105px;
+}
+
+header > nav {
+  flex-flow: row nowrap;
+  display: flex;
+  gap: 20px;
+}
+
+header > nav > a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 15px;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+nav a:hover {
+  background-color: rgb(252, 143, 143);
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.hero {
+  background: url('../media/pexels-picjumbo-com-55570-196652.jpg') no-repeat center center;
+  background-size: cover;
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white; /* Light text for dark photos */
+  position: relative;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.462);
+}
+
+/* Optional dark overlay for better text contrast */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.238); /* Adjust opacity */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1; /* Places text above overlay */
+}
+
+.hero-content > h1 {
+  padding: 15px;
+  font-family: arcade;
+  font-size: 5em;
+  color: white;
+}
+
+.hero-content > p > a {
+  background: #AA7880; /* Band's accent color */
+  color: white;
+  padding: 12px 30px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.hero-content > p > a:hover {
+ background-color: #C78D97;
+ transition: background-color 0.3s;
+}
+
+footer {
+  text-align: center;
+  background-image: linear-gradient(to bottom, #5e2f66, #f9a5b3);
+}
+
+.footer-gif {
+  width: 250px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+    /* Optional: Add a hover effect */
+  transition: transform 0.3s;
+}
+.footer-gif:hover {
+  transform: scale(1.1); /* Slight zoom on hover */
+}
