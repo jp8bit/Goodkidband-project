@@ -1,0 +1,330 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: arcade;
+  src: url(../fonts/ARCADECLASSIC.TTF);
+}
+
+@font-face {
+  font-family: russo;
+  src: url(../fonts/Russo_One.ttf);
+}
+
+
+@keyframes float-and-spin {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(10deg); /* Tilt at peak */
+  }
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body {
+font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  background-image: linear-gradient(to bottom, #ffc2cc, #5e2f66);
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+}
+
+header > div#logo {
+  height: 125px;
+  display: flex;
+  align-items: center;
+}
+
+header > div#logo > a > img {
+  height: 105px;
+}
+
+header > nav {
+  flex-flow: row nowrap;
+  display: flex;
+  gap: 20px;
+}
+
+header > nav > a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 15px;
+  font-weight: bold;
+  font-size: 1.5em;
+  font-family: russo;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.448);
+}
+
+nav a:hover {
+  background-color: rgb(252, 143, 143);
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+/* ===== MAIN CONTENT IMPROVEMENTS ===== */
+main {
+  background: #292828; /* Dark base for contrast */
+  padding: 20px 0;
+  overflow: hidden; /* Contain floated elements */
+}
+
+/* === Introduction Section === */
+#introduction-wrapper {
+  background: linear-gradient(135deg, #ff6b6b 0%, #5e2f66 100%);
+  
+  margin: 0 -20px;
+  position: relative;
+}
+
+#introduction {
+  background: 
+  linear-gradient(rgba(255,255,255,0.2));
+  color: white;
+  padding: 3rem;
+  border-radius: 15px;
+  max-width: 900px;
+  margin: 0 auto;
+  box-shadow: 
+    0 10px 30px rgba(0,0,0,0.5),
+    inset 0 0 10px rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.1);
+  position: relative;
+  z-index: 2;
+}
+
+#introduction::before {
+  content: '';
+  position: absolute;
+  top: -5px; left: -5px; right: -5px; bottom: -5px;
+  background: linear-gradient(45deg, #ff6b6b, #5e2f66, #ff8e8e);
+  z-index: -1;
+  border-radius: 18px;
+  filter: blur(10px);
+  opacity: 0.7;
+}
+
+#introduction > h1 {
+  font-family: 'russo', sans-serif;
+  color: white;
+  text-align: center;
+  font-size: 3.5rem;
+  margin-bottom: 2rem;
+  letter-spacing: 3px;
+  text-shadow: 
+    2px 2px 0 #ff6b6b,
+    4px 4px 0 rgba(0,0,0,0.3);
+}
+
+#introduction > p {
+  line-height: 1.8;
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 0 2rem;
+  position: relative;
+}
+
+/* Glitch effect on hover for links */
+#introduction a {
+  color: #ff8e8e;
+  text-decoration: none;
+  position: relative;
+  font-weight: bold;
+}
+
+#introduction a:hover {
+  animation: glitch 0.5s linear infinite;
+}
+
+@keyframes glitch {
+  0% { text-shadow: 1px 0 #ff6b6b, -1px 0 #5e2f66; }
+  25% { text-shadow: 2px 0 #ff6b6b, -2px 0 #5e2f66; }
+  50% { text-shadow: -1px 0 #ff6b6b, 1px 0 #5e2f66; }
+  75% { text-shadow: -2px 0 #ff6b6b, 2px 0 #5e2f66; }
+  100% { text-shadow: 1px 0 #ff6b6b, -1px 0 #5e2f66; }
+}
+
+/* === Members Section === */
+#members {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#members > h1 {
+  font-family: 'russo', sans-serif;
+  color: white;
+  background: linear-gradient(to right, #ff6b6b, #5e2f66);
+  padding: 25px;
+  text-align: center;
+  font-size: 3rem;
+  letter-spacing: 2px;
+  margin-bottom: 40px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  text-shadow: 2px 2px 0 rgba(0,0,0,0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+#members > h1::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: linear-gradient(90deg, 
+  transparent, 
+    rgba(255,255,255,0.2), 
+    transparent);
+  transform: translateX(-100%);
+  animation: shine 3s infinite;
+}
+
+@keyframes shine {
+  100% { transform: translateX(100%); }
+}
+
+#members > div {
+  display: flex;
+  align-items: center;
+  min-height: 500px;
+  margin: 50px 0;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  transition: transform 0.5s;
+}
+
+#members > div:hover {
+  transform: translateY(-10px);
+}
+
+#members > div > img {
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+  object-position: center;
+  filter: grayscale(20%) contrast(110%);
+  transition: all 0.5s;
+  flex: 0 0 auto;
+}
+
+#members > div:hover > img {
+  filter: grayscale(0%) contrast(120%);
+  transform: scale(1.03);
+}
+
+#members > div > h2 {
+  flex: 1;
+  padding: 2rem;
+  font-family: 'russo', sans-serif;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 0 rgba(0,0,0,0.3);
+  position: relative;
+  color: white;
+}
+
+.nick {
+  background: linear-gradient(to bottom, #0c3166, #5a74dd);
+}
+
+.jon {
+  background: linear-gradient(to bottom, #f2a23a, #ee5f22);
+}
+
+.michael {
+  background: linear-gradient(to bottom, rgb(124, 225, 124), rgb(223, 94, 146));
+}
+
+.david {
+  background: linear-gradient(to bottom, rgb(177, 39, 39), rgb(236, 205, 92));
+}
+
+.jacob {
+  background: linear-gradient(to bottom, rgb(66, 170, 186), rgb(68, 133, 68));
+}
+
+/* Alternate layout */
+.michael, .jacob {
+  flex-direction: row-reverse;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #members > div {
+    flex-direction: column;
+    min-height: auto;
+  }
+  
+  #members > div > img {
+    width: 100%;
+    min-height: 250px;
+  }
+  
+  #introduction > h1 {
+    font-size: 2.5rem;
+  }
+  
+  #members > h1 {
+    font-size: 2.2rem;
+  }
+}
+
+footer {
+  text-align: center;
+  background-image: linear-gradient(to bottom, #5e2f66, #f9a5b3);
+  padding: 25px 20px;
+}
+
+.footer-content {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-around;
+  margin: 0 auto;
+}
+
+.footer-gif {
+  width: 250px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+    /* Optional: Add a hover effect */
+  transition: transform 0.3s;
+  animation: float-and-spin 3s ease-in-out infinite; /* Adjust time (3s) for speed */
+  }
+
+.footer-gif:hover {
+  cursor: pointer;
+}
+
+.social-icons {
+  display: flex;
+  gap: 40px; /* Space between icons */
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.social-icons a {
+  color: rgb(99, 54, 62); /* Matches your pink gradient */
+  font-size: 1.8rem; /* Icon size */
+  transition: transform 0.3s, color 0.3s;
+}
+
+.social-icons a:hover {
+  color: white; /* Hover color */
+  transform: scale(1.2); /* Slight zoom */
+}
+
+.copyright {
+  margin-top: 30px;
+  opacity: 0.7;
+  font-size: 0.9rem;
+}
