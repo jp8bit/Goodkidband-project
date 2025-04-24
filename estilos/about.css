@@ -81,6 +81,7 @@ main {
 /* === Introduction Section === */
 #introduction-wrapper {
   background: linear-gradient(135deg, #ff6b6b 0%, #5e2f66 100%);
+
   
   margin: 0 -20px;
   position: relative;
