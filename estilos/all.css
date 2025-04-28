@@ -1,0 +1,122 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: arcade;
+  src: url(../fonts/ARCADECLASSIC.TTF);
+}
+
+@font-face {
+  font-family: russo;
+  src: url(../fonts/Russo_One.ttf);
+}
+
+
+@keyframes float-and-spin {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(10deg); /* Tilt at peak */
+  }
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body {
+font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  background-image: linear-gradient(to bottom, #ffc2cc, #5e2f66);
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+}
+
+header > div#logo {
+  height: 125px;
+  display: flex;
+  align-items: center;
+}
+
+header > div#logo > a > img {
+  height: 105px;
+}
+
+header > nav {
+  flex-flow: row nowrap;
+  display: flex;
+  gap: 20px;
+}
+
+header > nav > a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 15px;
+  font-weight: bold;
+  font-size: 1.5em;
+  font-family: russo;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.448);
+}
+
+nav a:hover {
+  background-color: rgb(252, 143, 143);
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+footer {
+  text-align: center;
+  background-image: linear-gradient(to bottom, #5e2f66, #f9a5b3);
+  padding: 25px 20px;
+}
+
+.footer-content {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-around;
+  margin: 0 auto;
+}
+
+.footer-gif {
+  width: 250px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+    /* Optional: Add a hover effect */
+  transition: transform 0.3s;
+  animation: float-and-spin 3s ease-in-out infinite; /* Adjust time (3s) for speed */
+  }
+
+.footer-gif:hover {
+  cursor: pointer;
+}
+
+.social-icons {
+  display: flex;
+  gap: 40px; /* Space between icons */
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.social-icons a {
+  color: rgb(99, 54, 62); /* Matches your pink gradient */
+  font-size: 1.8rem; /* Icon size */
+  transition: transform 0.3s, color 0.3s;
+}
+
+.social-icons a:hover {
+  color: white; /* Hover color */
+  transform: scale(1.2); /* Slight zoom */
+}
+
+.copyright {
+  margin-top: 30px;
+  opacity: 0.7;
+  font-size: 0.9rem;
+}

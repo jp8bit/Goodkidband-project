@@ -260,27 +260,6 @@ main {
   flex-direction: row-reverse;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  #members > div {
-    flex-direction: column;
-    min-height: auto;
-  }
-  
-  #members > div > img {
-    width: 100%;
-    min-height: 250px;
-  }
-  
-  #introduction > h1 {
-    font-size: 2.5rem;
-  }
-  
-  #members > h1 {
-    font-size: 2.2rem;
-  }
-}
-
 footer {
   text-align: center;
   background-image: linear-gradient(to bottom, #5e2f66, #f9a5b3);
