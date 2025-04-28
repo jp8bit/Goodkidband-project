@@ -1,0 +1,79 @@
+@charset "UTF-8";
+
+@media only screen and (max-width: 768px) {
+  header {
+    padding: 0 20px;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  header > div#logo {
+    height: auto;
+    padding: 10px 0;
+  }
+  
+  header > nav {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    padding-bottom: 20px;
+  }
+  
+  header > nav > a {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  #members > div {
+    align-items: center;
+    text-align: center;
+  }
+
+  #members > div > h2 {
+    width: 100%;
+    padding: 1.5em;
+    order: 2;
+  }
+
+  #members > div > img {
+    order: 1;
+    margin-bottom: 0;
+  }
+
+  .nick {
+    background: linear-gradient(to bottom, #0c3166, #5a74dd);
+  }
+  
+  .jon {
+    background: linear-gradient(to bottom, #f2a23a, #ee5f22);
+  }
+  
+  
+  .michael {
+    background: linear-gradient(to bottom, rgb(124, 225, 124), rgb(223, 94, 146));
+  }
+  
+  .david {
+    background: linear-gradient(to bottom, rgb(177, 39, 39), rgb(236, 205, 92));
+  }
+  
+  .jacob {
+    background: linear-gradient(to bottom, rgb(66, 170, 186), rgb(68, 133, 68));
+  }
+
+
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .footer-gif {
+    width: 200px;
+  }
+  
+  .social-icons {
+    flex-wrap: wrap;
+    gap: 33px;
+  }
+}
