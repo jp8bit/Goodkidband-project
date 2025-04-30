@@ -73,7 +73,7 @@ nav a:hover {
 
 /* ===== MAIN CONTENT IMPROVEMENTS ===== */
 main {
-  background: #292828; /* Dark base for contrast */
+  background:  #292828;/* Dark base for contrast */
   padding: 20px 0;
   overflow: hidden; /* Contain floated elements */
 }

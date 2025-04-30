@@ -1,48 +1,67 @@
 @charset "UTF-8";
 
-main {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  padding: 40px 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-  background-color: #292828;
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
 }
 
-/* Music Section Layout */
-main {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  padding: 40px 20px;
+body {
+  background-color: #292828;
+}
+.main {
+  padding: 2rem;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .music-item {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
+  display: flex;
   align-items: center;
+  margin-bottom: 4em;
+  margin-top: 4em;
+  gap: 2rem;
 }
 
-.music-text {
-  order: 1; /* Forces text to left */
-  background: rgba(255,255,255,0.1);
-  padding: 30px;
-  border-radius: 15px;
-  backdrop-filter: blur(5px);
+/* Default layout - video on left, text on right */
+.music-item .music {
+  flex: 1;
+  order: 1;
 }
 
-.music {
-  order: 2; /* Forces video to right */
-  position: relative;
+.music-item .music-text {
+  flex: 1;
+  order: 2;
+  padding: 2em;
+  background-color: gray;
 }
 
-video {
+/* Alternate layout for even items - video on right, text on left */
+.music-item:nth-child(even) .music {
+  order: 2;
+}
+
+.music-item:nth-child(even) .music-text {
+  order: 1;
+}
+
+/* Video styling */
+.music video {
   width: 100%;
   height: auto;
-  border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.music-text h1 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Text styling */
+.music-text p {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: white;
 }
