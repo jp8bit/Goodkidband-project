@@ -11,4 +11,4 @@ Arcade Font by Jakob Fischer.
 
 Character design by Gabriel Altrows
 
-Director, Art Director, Producer, Storyboard Artist, Background Painter, Rough Animator, Cleanup, Animation, Editor <a href="https://www.youtube.com/@xray.alpha.charlie" target="_blank" style="text-decoration: none">@xray.alpha.charlie</a>
+Animations and Art Direction<a href="https://www.youtube.com/@xray.alpha.charlie" target="_blank" style="text-decoration: none">@xray.alpha.charlie</a>
