@@ -30,6 +30,7 @@ body {
 font-family: Arial, Helvetica, sans-serif;
 }
 
+/* HEADER CONTENT */
 header {
   background-image: linear-gradient(to bottom, #ffc2cc, #5e2f66);
   display: flex;
@@ -71,11 +72,11 @@ nav a:hover {
   transition: background-color 0.3s;
 }
 
-/* ===== MAIN CONTENT IMPROVEMENTS ===== */
+/* ===== MAIN CONTENT ===== */
 main {
-  background:  #292828;/* Dark base for contrast */
+  background:  #292828;
   padding: 20px 0;
-  overflow: hidden; /* Contain floated elements */
+  overflow: hidden;
 }
 
 /* === Introduction Section === */
@@ -134,7 +135,7 @@ main {
   position: relative;
 }
 
-/* Glitch effect on hover for links */
+/* Glitch effect on hover for links (ikr its so cool) */
 #introduction a {
   color: #ff8e8e;
   text-decoration: none;
@@ -255,11 +256,12 @@ main {
   background: linear-gradient(to bottom, rgb(66, 170, 186), rgb(68, 133, 68));
 }
 
-/* Alternate layout */
+/* Alternate layout (left to right) */
 .michael, .jacob {
   flex-direction: row-reverse;
 }
 
+ /* FOOTER CONTENT */
 footer {
   text-align: center;
   background-image: linear-gradient(to bottom, #5e2f66, #f9a5b3);
@@ -277,9 +279,8 @@ footer {
   width: 250px;
   margin-top: 10px;
   margin-bottom: 5px;
-    /* Optional: Add a hover effect */
   transition: transform 0.3s;
-  animation: float-and-spin 3s ease-in-out infinite; /* Adjust time (3s) for speed */
+  animation: float-and-spin 3s ease-in-out infinite;
   }
 
 .footer-gif:hover {
@@ -288,20 +289,20 @@ footer {
 
 .social-icons {
   display: flex;
-  gap: 40px; /* Space between icons */
+  gap: 40px;
   justify-content: center;
   margin: 20px 0;
 }
 
 .social-icons a {
-  color: rgb(99, 54, 62); /* Matches your pink gradient */
-  font-size: 1.8rem; /* Icon size */
+  color: rgb(99, 54, 62);
+  font-size: 1.8rem;
   transition: transform 0.3s, color 0.3s;
 }
 
 .social-icons a:hover {
-  color: white; /* Hover color */
-  transform: scale(1.2); /* Slight zoom */
+  color: white;
+  transform: scale(1.2);
 }
 
 .copyright {

@@ -1,0 +1,17 @@
+/* Responsive adjustments for contacts */
+@media (max-width: 768px) {
+  .start-main h1 {
+    font-size: 2rem;
+  }
+  
+  .contacts p {
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+  
+  .contacts strong {
+    display: block;
+    width: auto;
+    margin-bottom: 0.3rem;
+  }
+}

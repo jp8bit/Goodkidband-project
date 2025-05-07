@@ -1,7 +1,11 @@
 # Goodkidband-project
- A site detailing the history of Good Kid
+ A site detailing the history of Good , entirely in HTML and CSS.
+
+ Acess here:
 
  All images are placeholders for demonstration only. Copyrights belong to their owners. Will replace if requested.
+
+ Also, if I forgot to credit someone or made a mistake, feel free to leave an issue so I can fix it!
 
 CREDITS:
 

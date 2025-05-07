@@ -1,4 +1,3 @@
-/* ===== MUSIC SECTION - MATCHING ABOUT STYLE ===== */
 main {
   background: #292828;
   padding: 2rem 0;
@@ -63,7 +62,7 @@ main {
   z-index: -1;
 }
 
-/* Alternate layout for even items */
+/* Alternate layout for even items, yup yup */
 .music-item:nth-child(even) {
   flex-direction: row-reverse;
 }
@@ -84,7 +83,6 @@ main {
   margin-bottom: 2rem;
 }
 
-/* Add a "Listen Now" button */
 .listen-btn {
   display: inline-block;
   background: #ff6b6b;
@@ -104,13 +102,64 @@ main {
   transform: translateY(-3px);
 }
 
-/* "And many more" styling */
-.music-text:last-child {
-  justify-content: center;
-  align-items: center;
+.more-videos {
+  padding: 0 !important;
+  position: relative;
   text-align: center;
-  background: linear-gradient(135deg, #5e2f66, #ff8e8e);
 }
+
+.more-videos h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: white;
+  padding: 1.5rem 3rem;
+  background: rgba(0, 0, 0, 0.436);
+  border-radius: 50px;
+  
+  /* Glow effect */
+  text-shadow: 
+    0 0 15px #ff6b6b,
+    0 0 30px #5e2f66;
+  width: max-content;
+}
+
+.video-trio {
+  display: flex;
+  width: 100%;
+  margin: 0;
+}
+
+.mini-video {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.mini-video video {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  display: block;
+}
+
+.video-trio,
+.mini-video,
+.mini-video video {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.mini-video:nth-child(3) video {
+  object-position: 0% 0%;
+}
+
 
   /* Different backgrounds for each cuz im lazy */
 .music-item:nth-child(2) .music-text::before {
@@ -151,7 +200,7 @@ main {
 .music-item:nth-child(4) .listen-btn:hover {
   background: #6a3093;
 }
-/* Responsive adjustments */
+/* Responsive adjustments here cuz for some reason the other one isnt working lol */
 @media (max-width: 768px) {
   .music-item {
     flex-direction: column;
@@ -176,4 +225,23 @@ main {
   .music-text h1 {
     font-size: 2rem;
   }
-}
+
+  .video-trio {
+      flex-direction: column;
+      height: 600px; /* Fixed height for mobile */
+    }
+    
+   .mini-video {
+      height: 300px;
+      overflow: hidden;
+    }
+
+    .mini-video video {
+      object-position: 30% 80% !important;
+    }
+    
+   .more-videos h1 {
+      font-size: 1.8rem;
+      padding: 0.8rem 1.5rem;
+    }
+  }

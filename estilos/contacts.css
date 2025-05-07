@@ -1,0 +1,81 @@
+body {
+  background: #292828;
+}
+
+main {
+  background: #272626;
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.start-main h1 {
+  font-family: 'russo', sans-serif;
+  color: white;
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  letter-spacing: 1px;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.start-main h1::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 25%;
+  width: 50%;
+  height: 3px;
+  background: linear-gradient(to right, #ff6b6b, #5e2f66);
+}
+
+.contacts {
+  background: rgba(40, 40, 40, 0.8);
+  border-radius: 10px;
+  padding: 2rem;
+  margin: 2rem 0;
+  border-left: 4px solid #ff6b6b;
+  border-right: 4px solid #ff6b6b;
+}
+
+.contacts p {
+  color: white;
+  font-size: 1.1rem;
+  line-height: 2;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.contacts p:last-child {
+  border-bottom: none;
+}
+
+.contacts strong {
+  color: #ff8e8e;
+  font-weight: bold;
+  display: inline-block;
+  width: 120px;
+}
+
+.last-main {
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 1.1rem;
+}
+
+.last-main h2 {
+  color: rgba(255,255,255,0.8);
+  font-weight: normal;
+}
+
+.last-main a {
+  color: #ff6b6b;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.last-main a:hover {
+  color: #ff8e8e;
+  text-decoration: underline;
+}

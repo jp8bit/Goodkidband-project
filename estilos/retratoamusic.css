@@ -1,30 +1,40 @@
-/* Responsive Design */
-@media (max-width: 900px) {
+@media (max-width: 768px) {
   .music-item {
     flex-direction: column;
-    margin: 3rem auto;
-    gap: 1.5rem;
+    min-height: auto;
+    margin: 3rem 0;
+  }
+  
+  .music, .music-text {
+    width: 100%;
+    height: auto;
+    padding: 2rem;
+  }
+  
+  .music {
+    height: 300px;
   }
   
   .music-item:nth-child(even) {
     flex-direction: column;
   }
   
-  .music, .music-text {
-    width: 100%;
-  }
-  
-  .music-text {
-    padding: 1.5rem;
-  }
-}
-
-@media (max-width: 600px) {
   .music-text h1 {
     font-size: 2rem;
   }
-  
-  .music-text:last-child h1 {
-    font-size: 2.5rem;
+
+  .video-trio {
+      flex-direction: column;
+      height: 600px;
+    }
+    
+    .mini-video {
+      height: 33.33%;
+    }
+    
+    
+  .more-videos h1 {
+      font-size: 1.8rem;
+      padding: 0.8rem 1.5rem;
+    }
   }
-}
