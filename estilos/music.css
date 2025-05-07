@@ -234,6 +234,8 @@ main {
    .mini-video {
       height: 300px;
       overflow: hidden;
+      will-change: transform, opacity;
+      backface-visibility: hidden;
     }
 
     .mini-video video {
