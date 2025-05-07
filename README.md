@@ -1,7 +1,7 @@
 # Goodkidband-project
  A site detailing the history of Good Kid, entirely in HTML and CSS.
 
- Access here: <a href="https://jp8bit.github.io/Goodkidband-project/home.html"></a>
+ Access here: <a href="https://jp8bit.github.io/Goodkidband-project/home.html">https://jp8bit.github.io/Goodkidband-project/home.html</a>
 
  All images are placeholders for demonstration only. Copyrights belong to their owners. Will replace if requested.
 
