@@ -93,10 +93,6 @@ footer {
   animation: float-and-spin 3s ease-in-out infinite; /* Adjust time (3s) for speed */
   }
 
-.footer-gif:hover {
-  cursor: pointer;
-}
-
 .social-icons {
   display: flex;
   gap: 40px; /* Space between icons */
